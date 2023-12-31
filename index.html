@@ -5,9 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/qixin-demo/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/qixin-demo/assets/index-31H49mH9.js"></script>
+    <script type="module" crossorigin src="/qixin-demo/assets/index-H1dqMzQE.js"></script>
+    <link rel="stylesheet" crossorigin href="/qixin-demo/assets/index-OV7xXP-9.css">
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://webapi.amap.com/loader.js"></script>
+    <script src="./src/vconsole.js"></script>
+    <script>
+      new VConsole();
+      // 高德密钥注入
+      window._AMapSecurityConfig = {
+        securityJsCode: '26081bec053898a11eb016f5ad745018'
+      };
+    </script>
   </body>
 </html>
