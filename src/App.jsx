@@ -19,7 +19,7 @@ const inQX = () => !!window.flutter_inappwebview;
 const logger = (data, title) => console.log(title || '', JSON.stringify(data))
 let QxResolve = () => {}
 
-const getQxLocation = (timeout = 5000) => {
+const getQxLocation = (timeout = 10000) => {
   const callHandler = window.flutter_inappwebview.callHandler;
   if(callHandler) {
     callHandler('Notify', { 
