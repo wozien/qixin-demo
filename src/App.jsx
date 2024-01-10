@@ -124,6 +124,16 @@ export default function App() {
     }
   }
 
+  const getFlag = () => {
+    const callHandler = window.flutter_inappwebview.callHandler;
+    if(callHandler) {
+      callHandler('Notify', { 
+        type: 'get-flag', 
+        data: '' 
+      });
+    }
+  }
+
   useEffect(() => {
     if (inQX()) {
       window.__customMobileEvent = function (e) {
@@ -131,7 +141,7 @@ export default function App() {
         QxResolve(e);
       };
     }
-  })
+  }, []);
 
   return (
     <>
@@ -157,6 +167,7 @@ export default function App() {
       </div>
       <div>
         <button onClick={getLocation} className='btn' disabled={loading}>获取定位</button>
+        <button onClick={getFlag} className='btn' disabled={loading}>get flag</button>
       </div>
       {
         loading &&

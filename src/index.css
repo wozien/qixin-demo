@@ -45,6 +45,7 @@
   border: none;
   color: white;
   background-color: #247fff;
+  margin-right: 10px;
 }
 
 .btn[disabled] {
