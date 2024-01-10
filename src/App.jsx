@@ -19,7 +19,7 @@ const inQX = () => !!window.flutter_inappwebview;
 const logger = (data, title) => console.log(title || '', JSON.stringify(data))
 let QxResolve = () => {}
 
-const getQxLocation = (timeout = 3000) => {
+const getQxLocation = (timeout = 5000) => {
   const callHandler = window.flutter_inappwebview.callHandler;
   if(callHandler) {
     callHandler('Notify', { 
@@ -33,7 +33,7 @@ const getQxLocation = (timeout = 3000) => {
     setTimeout(() => {
       reject(new Error('企信获取定位超时, 请重启企信app试下'));
     }, timeout)
-  })
+  });
 }
 
 const getBrowserLocation = () => {
